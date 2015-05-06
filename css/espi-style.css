@@ -1,0 +1,30 @@
+@font-face
+{
+	font-family: EspiTitleFont;
+	src: url("../fonts/EspionageTitle.otf") format("opentype");
+}
+@font-face
+{
+	font-family: sergoeuiz;
+	src: url("../fonts/segoeuiz.ttf");
+}
+@font-face
+{
+	font-family: seguibl;
+	src: url("../fonts/seguibl.ttf");
+}
+@font-face
+{
+	font-family: albertusextrabold;
+	src: url("../../poster/fonts/albertusextrabold.ttf");
+}
+@font-face
+{
+	font-family: confidential;
+	src: url("../../poster/fonts/confidential.ttf");
+}
+.espiTitle{
+	font-family:EspiTitleFont;
+	font-weight:bold;
+}
+

@@ -1,0 +1,302 @@
+.poster-div
+{
+    background:white;
+    width: 820px;
+}
+
+.poster-table
+{
+    /*width: 100%;*/
+    margin:7px;
+}
+
+.poster-table td
+{
+    padding: 3px;
+}
+
+.poster-item
+{
+    position: relative; left: 0; top: 0;    
+    width:120px;
+    height:120px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color:black;
+    
+    overflow: hidden;
+}
+
+.poster-avatar
+{
+    position: relative; top: 0; left: 0;
+    width:120px;
+    min-height:120px;
+}
+
+.poster-overlay
+{
+    position: absolute; top: 20px; left: 20px; 
+    width:80px;
+    max-height:80px;
+}
+
+.poster-overlay-role
+{
+    position: absolute; top: 10px; left: 10px; 
+    width:50px;
+    max-height:50px;
+}
+
+.poster-username
+{
+    position:relative;
+    font-size: 15px;
+    text-align:center;
+    margin-bottom: 0px;
+}
+
+.poster-civilian
+{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.poster-detective
+{
+    -webkit-filter:hue-rotate(170deg);
+    -moz-filter: hue-rotate(170deg);
+    filter: hue-rotate(170deg);
+}
+
+.poster-spy
+{
+    -webkit-filter:hue-rotate(310deg);
+    -moz-filter: hue-rotate(310deg);
+    filter: hue-rotate(310deg);
+}
+
+.poster-informant
+{
+    -webkit-filter:hue-rotate(340deg);
+    -moz-filter: hue-rotate(340deg);
+    filter: hue-rotate(340deg);
+}
+
+.poster-text
+{
+    position: absolute; top: 50px; left: 20px; 
+    
+    -ms-transform: rotate(-25deg); /* IE 9 */
+    -webkit-transform: rotate(-25deg); /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+    
+	font-family:confidential;
+    font-size:27px;
+    line-height: 90%;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-align:center;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.poster-text-infront
+{
+    z-index:1000;
+}
+
+.poster-text-blurred
+{   
+    
+    color: #000;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000;
+    -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px); filter: blur(1px);
+}
+
+.poster-day
+{
+    font-size:15px; 
+}
+
+.poster-players-text
+{
+    margin-top: 15px; color:gray; letter-spacing: 2px;
+
+}
+.poster-round-text
+{
+background: #5a5a5a; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVhNWE1YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzA0MDYwNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNDA0MDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #5a5a5a 0%, #5b5b5b 50%, #040604 51%, #040404 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5a5a5a), color-stop(50%,#5b5b5b), color-stop(51%,#040604), color-stop(100%,#040404)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5a5a5a 0%,#5b5b5b 50%,#040604 51%,#040404 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5a5a5a 0%,#5b5b5b 50%,#040604 51%,#040404 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5a5a5a 0%,#5b5b5b 50%,#040604 51%,#040404 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #5a5a5a 0%,#5b5b5b 50%,#040604 51%,#040404 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a5a5a', endColorstr='#040404',GradientType=0 ); /* IE6-8 */
+
+      -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bolder;
+  font-size:xx-large; text-shadow: 2px 2px rgba(1,1,1,0.35);
+}
+
+.poster-help-no-border
+{
+    border-width:0px;
+}
+
+.poster-join-number
+{
+    font-family:Verdana;
+    
+    position: absolute; top: 60px; left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size:65px;
+    line-height: 100%;
+    color: #808080;
+    letter-spacing: 0px;
+    text-align:center;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.poster-join-text
+{
+    font-family:Verdana;
+    
+    position: absolute; top: 55px; left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size:50px;
+    line-height: 100%;
+    color: #318DBE;
+    letter-spacing: 0px;
+    text-align:center;
+    font-weight: bolder;
+    font-variant: small-caps;
+    opacity:0.0;
+    
+}
+
+.no-margin
+{
+    margin:0px;
+    padding:0px;
+    border-width:0px;
+}
+/*
+.poster-table
+{
+    background: white;
+}
+
+.poster-item
+{
+    width: 110px;
+    height:110px;
+    margin-top: -30px;
+    margin-bottom: 60px;
+    margin-left: 7px;
+    margin-right: 7px;
+    
+}
+
+.poster-name
+{
+    position:relative;
+    font-size: 15px;
+    left:0px;
+    top:140px;
+    max-width:200px;
+    width:100%;
+    height:auto;
+    text-align: center;
+    color: black;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.poster-name:hover{
+    text-decoration:none;
+}
+
+.poster-image
+{
+    width:100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color:black;
+}
+
+.poster-lynched
+{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.poster-lynched-image{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    z-index: 5;
+}
+.poster-text
+{
+    position:relative;
+    font-size: 15px;
+    left:0px;
+    top:-50px;
+    max-width:200px;
+    width:100px;
+    height:auto;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+*/
