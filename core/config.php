@@ -8,10 +8,11 @@ return [
         'pass' => ''
     ],
     'forum' => [
-        'url' => '127.0.0.1'
+        'relative_path' => '../../'
     ],
     'espionage' => [
-        'path' => '/espionage/core'
+        'core_path' => '/espionage/core',
+        'avatar_path' => '/espionage/img/avatars/'
     ]
 ];
 

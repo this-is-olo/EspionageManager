@@ -6,6 +6,7 @@ class Database {
 
     private $link;
 
+
     public function __construct( $host, $user, $pass, $db ) {
         $link = mysqli_connect($host, $user, $pass, $db) or die("Error " . mysqli_error($link));
 
@@ -13,16 +14,21 @@ class Database {
     }
 
     public function getPosterInformation( $round_id ) {
+
+        global $configx;
         $round_id = (int)sanitize($round_id);
 
         //$query = "SELECT * FROM `espi_users` NATURAL JOIN `espi_avatars` NATURAL JOIN `espi_teams` NATURAL JOIN `espi_roles` WHERE `round_id`=$round_id";
-        $query = "SELECT `username`, `teamname`, `role_name`, `poster_position`, `avatar_url`, `isAlive` FROM `espi_users` NATURAL JOIN `espi_avatars` NATURAL JOIN `espi_teams` NATURAL JOIN `espi_roles` WHERE `round_id`=$round_id";
+        $query = "SELECT `username`, `teamname`, `role_name`, `poster_position`, `avatar_url`, `isAlive`
+                  FROM `espi_users` NATURAL JOIN `espi_avatars` NATURAL JOIN `espi_teams` NATURAL JOIN `espi_roles`
+                  WHERE `round_id`=$round_id";
 
         //execute the query.
         $result = $this->link->query($query) or die("Error in the consult.." . mysqli_error( $this->link));
 
         $data = Array();
-        while($row = mysqli_fetch_array($result)) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $row['avatar_url'] = $configx->get("espionage.avatar_path").$row['avatar_url'];
             $data[] = $row;
         }
         return $data;

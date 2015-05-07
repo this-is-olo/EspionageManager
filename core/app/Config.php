@@ -12,9 +12,6 @@ class Config{
     public function loadConfigFile( $file ){
         $file = sanitize($file);
 
-       //if( !file_exists($file))
-       //     return;
-
         $this->data = require $file;
     }
 
@@ -39,6 +36,7 @@ class Config{
         return $data;
     }
 
+    //to be removed
     public function get_raw(){
         return $this->data;
     }
